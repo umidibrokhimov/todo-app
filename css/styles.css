@@ -98,10 +98,11 @@ body{
     max-width: 20vw;
     min-width: 20vw;
     width: 20vw;
-    min-height: 100vh;
     padding: 0 30px;
     padding-top: 30px;
     border-right: 5px solid #222;
+    height: calc(100vh - 70px);
+    overflow: auto;
 }
 .site-main .categories-section label{
     display: block;
@@ -111,10 +112,17 @@ body{
     overflow: hidden;
 }
 .site-main .todos-section{
+    max-width: 80vw;
+    min-width: 80vw;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    height: calc(100vh - 70px);
+    overflow: auto;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .site-main .todos-section .todo{
     padding: 15px;
