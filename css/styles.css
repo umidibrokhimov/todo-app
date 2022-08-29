@@ -9,12 +9,17 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+.site-header{
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 .site-header .container{
     height: 70px;
@@ -40,12 +45,52 @@ body{
     font-weight: 600;
     cursor: pointer;
 }
-
-
-
-
-
-
+.site-main{
+    min-height: calc(100vh - 70px);
+    display: flex;
+}
+.site-main .categories-section{
+    max-width: 20vw;
+    min-width: 20vw;
+    width: 20vw;
+    min-height: 100vh;
+    padding: 0 30px;
+    padding-top: 30px;
+    border-right: 5px solid #222;
+}
+.site-main .categories-section label{
+    display: block;
+}
+.site-main .categories-section[data-menu="closed"]{
+    max-width: 50px;
+    overflow: hidden;
+}
+.site-main .todos-section{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.site-main .todos-section .todo{
+    padding: 15px;
+    max-width: 300px;
+    background-color: rgb(243, 211, 106);
+    color: #fff;
+    border-radius: 5px ;
+    cursor: pointer;
+    margin: 15px;
+}
+.site-main .todos-section .todo h4{
+    margin: 0; 
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+.site-main .todos-section .todo .date{
+    border-top: 1px solid rgb(247, 247, 247);
+    padding-top: 20px;
+}
 
 .modal{
     min-width: 100vw;
