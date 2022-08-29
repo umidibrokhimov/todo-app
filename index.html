@@ -17,10 +17,10 @@
             <div class="navigation">
                 <button class="settings-btn">o</button>
                 <div class="create-dropdown">
-                    <button id="open-modal" class="add-btn">+</button>
-                    <ul class="dropdown-menu">
+                    <button class="add-btn">+</button>
+                    <ul class="dropdown-menu" data-dropdown-menu="false">
                         <li><button>New category</button></li>
-                        <li><button>New todo</button></li>
+                        <li><button id="open-modal">New todo</button></li>
                     </ul>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         </section>
     </main>
 
-    <div class="modal" data-modal-open="true">
+    <div class="modal" data-modal-open="false">
         <div class="modal-container">
             <div class="modal-head">
                 <button id="hide-modal">x</button>

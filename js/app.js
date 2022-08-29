@@ -9,13 +9,20 @@ window.addEventListener('DOMContentLoaded', (e) => {
     select = form.querySelector('#select'),
     modal = document.querySelector('.modal'),
     openModalBtn = document.querySelector('#open-modal'),
-    hideModalBtn = modal.querySelector('#hide-modal')
+    hideModalBtn = modal.querySelector('#hide-modal'),
+    createBtn = document.querySelector('.add-btn'),
+    dropdownBtns = document.querySelector('.dropdown-menu');
     
     /* 
     -------------------------
-    Modal settings
+    Modals settings
     -------------------------
     */
+    /*
+    -------------------------
+    New modal
+    -------------------------
+    */ 
     openModalBtn.addEventListener('click', () =>{
         modal.dataset.modalOpen = true
     })
@@ -26,6 +33,20 @@ window.addEventListener('DOMContentLoaded', (e) => {
     })
     hideModalBtn.addEventListener('click', () => {
         modal.dataset.modalOpen = false
+    })
+    
+    /*
+    ------------------------
+    create dropdown
+    ------------------------
+    */
+    
+    createBtn.addEventListener('click', (e) => {
+        if(dropdownBtns.dataset.dropdownMenu === "true"){
+            dropdownBtns.dataset.dropdownMenu = false
+        }else{
+            dropdownBtns.dataset.dropdownMenu = true
+        }
     })
     
     /* 
@@ -60,10 +81,4 @@ window.addEventListener('DOMContentLoaded', (e) => {
         todosArr.push(todoObj)
         console.log(todosArr);
     }
-})
-
-let btn = document.querySelector('#btn')
-
-btn.addEventListener('click', (e) => {
-    console.log('Modal ochilishi kerak edi');
 })
