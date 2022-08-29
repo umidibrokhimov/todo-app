@@ -93,7 +93,7 @@ body{
 }
 
 .modal{
-    min-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     border: none;
     align-items: center;
