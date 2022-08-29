@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <button id="open-modal">Modal ochatir</button>
+    <div class="modal" data-modal-open="true">
+        <div class="modal-container">
+            <div class="modal-head">
+                <button id="hide-modal">x</button>
+            </div>
+            <div class="modal-body">
+                <form id="form">
+                    <input type="text">
+                    <select id="select">
+                        <option value="hech nima1">Value1</option>
+                        <option value="hech nima2">Value2</option>
+                        <option><button id="btn">+</button></option>
+                    </select>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <script src="./js/app.js"></script>
 </body>

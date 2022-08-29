@@ -11,3 +11,37 @@ body{
     padding: 0;
     font-family: sans-serif;
 }
+.modal{
+    min-width: 100vw;
+    min-height: 100vh;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.modal[data-modal-open="true"]{
+    display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    padding: 20px;
+}
+.modal-head{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 50px;
+}
+.modal-head button{
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+}
