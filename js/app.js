@@ -56,12 +56,32 @@ window.addEventListener('DOMContentLoaded', (e) => {
     */
     
     let todosArr = []
-    
+    let todosSection = document.querySelector('.todos-section')
     form.addEventListener('submit', (e) => {
         e.preventDefault()
         
         makeTodo()
+
+        todosSection.textContent = '';
         
+        todosArr.forEach(todo => {
+            let elDiv = document.createElement('div')
+            let elh4 = document.createElement('h4')
+            let elPi = document.createElement('p')
+            let elDivDate = document.createElement('div')
+            
+            todosSection.appendChild(elDiv)
+            elDiv.appendChild(elh4)
+            elDiv.appendChild(elPi)
+            elDiv.appendChild(elDivDate)
+            elDiv.className = 'todo'
+            elh4.textContent = todo.title
+            elh4.className = 'title'
+            elDivDate.textContent = 'April 3, 2022'
+            elDivDate = 'date'
+            elPi.textContent = todo.about
+        })
+
         input.value = null;
     })
     
@@ -74,6 +94,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
             id: date.getTime(),
             in: `${months[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}`,
             title: input.value,
+            about: "aboutInput.value",
             isComplated: false,
             from: select.value
         }
